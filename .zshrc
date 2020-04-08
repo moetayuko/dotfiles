@@ -93,6 +93,7 @@ plugins=(
   fzf
   git
   repo
+  thefuck
   tmux
   z.lua
   zsh-autosuggestions

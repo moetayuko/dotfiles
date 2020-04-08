@@ -7,3 +7,6 @@
 [submodule ".zsh-custom/plugins/z.lua"]
 	path = .zsh-custom/plugins/z.lua
 	url = https://github.com/skywind3000/z.lua
+[submodule ".tmux-plugins/tpm"]
+	path = .tmux-plugins/tpm
+	url = https://github.com/tmux-plugins/tpm

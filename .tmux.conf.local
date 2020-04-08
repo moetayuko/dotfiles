@@ -294,3 +294,20 @@ tmux_conf_copy_to_os_clipboard=true
 
 # move status line to top
 #set -g status-position top
+
+# List of plugins
+set -g @tpm_plugins '          \
+  tmux-plugins/tpm             \
+  tmux-plugins/tmux-continuum  \
+  tmux-plugins/tmux-resurrect  \
+  morantron/tmux-fingers       \
+  schasse/tmux-jump            \
+  tmux-plugins/tmux-fpp        \
+'
+
+set -g @resurrect-capture-pane-contents 'on'
+set -g @resurrect-dir '~/.tmux-plugins/resurrect'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+set-environment -g TMUX_PLUGIN_MANAGER_PATH '~/.tmux-plugins/'
+run -b '~/.tmux-plugins/tpm/tpm'
