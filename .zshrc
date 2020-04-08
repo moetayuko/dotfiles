@@ -81,12 +81,22 @@ ZSH_CUSTOM=$HOME/.zsh-custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  # BUG: most come first https://github.com/ohmyzsh/ohmyzsh/issues/3435
+  vi-mode
+  ###
   adb
   command-not-found
+  copydir
+  dircycle
   docker
+  extract
+  fzf
   git
+  repo
   tmux
+  z.lua
   zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 
@@ -120,6 +130,31 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# zsh-autosuggestions
+# BUG: https://github.com/ohmyzsh/ohmyzsh/issues/7809
+# start typing + [Up-Arrow] - fuzzy find history forward
+if [[ "${terminfo[kcuu1]}" != "" ]]; then
+  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+fi
+# start typing + [Down-Arrow] - fuzzy find history backward
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+fi
+
+bindkey -M vicmd "k" up-line-or-beginning-search
+bindkey -M vicmd "j" down-line-or-beginning-search
+bindkey '^L' vi-forward-char
+
+# dircycle: alt+h/l
+bindkey '^[h' insert-cycledleft
+bindkey '^[l' insert-cycledright
+
+# tab complete menu: ctrl+h/j/k/l
+bindkey -M menuselect '^H' vi-backward-char
+bindkey -M menuselect '^K' vi-up-line-or-history
+bindkey -M menuselect '^L' vi-forward-char
+bindkey -M menuselect '^J' vi-down-line-or-history
 
 # Android
 export USE_CCACHE=1
