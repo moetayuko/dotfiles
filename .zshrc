@@ -12,6 +12,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 if [ -d /usr/share/oh-my-zsh ]; then
   DISABLE_AUTO_UPDATE="true"
   export ZSH=/usr/share/oh-my-zsh
+  ZSH_CUSTOM=$HOME/.zsh-custom
 else
   export ZSH=$HOME/.oh-my-zsh
 fi
@@ -73,7 +74,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$HOME/.zsh-custom
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
