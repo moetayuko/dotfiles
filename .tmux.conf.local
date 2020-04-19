@@ -308,6 +308,8 @@ set -g @tpm_plugins '          \
 set -g @resurrect-capture-pane-contents 'on'
 set -g @resurrect-dir '~/.tmux-plugins/resurrect'
 
+set -g @jump-key 'S'
+
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 set-environment -g TMUX_PLUGIN_MANAGER_PATH '~/.tmux-plugins/'
 run -b '~/.tmux-plugins/tpm/tpm'
