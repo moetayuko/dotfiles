@@ -94,6 +94,7 @@ plugins=(
   fzf
   git
   repo
+  systemd
   thefuck
   tmux
   z.lua
@@ -157,6 +158,14 @@ bindkey -M menuselect '^H' vi-backward-char
 bindkey -M menuselect '^K' vi-up-line-or-history
 bindkey -M menuselect '^L' vi-forward-char
 bindkey -M menuselect '^J' vi-down-line-or-history
+
+function dirdiff()
+{
+    # Shell-escape each path:
+    DIR1=$(printf '%q' "$1"); shift
+    DIR2=$(printf '%q' "$1"); shift
+    vim $@ -c "DirDiff $DIR1 $DIR2"
+}
 
 # Android
 export USE_CCACHE=1
