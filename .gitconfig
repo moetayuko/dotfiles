@@ -1,0 +1,29 @@
+[user]
+	email = dianlujitao@gmail.com
+	name = dianlujitao
+[color]
+	ui = auto
+[core]
+	editor = vim
+[http]
+	cookiefile = /home/dianlujitao/.gitcookies
+[sendemail]
+	smtpserver = smtp.gmail.com
+	smtpserverport = 587
+	smtpencryption = tls
+	smtpuser = dianlujitao@gmail.com
+	from = Jitao Lu <dianlujitao@gmail.com>
+	suppresscc = self
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[url "http://source.codeaurora.cn"]
+	insteadOf = https://source.codeaurora.org
+[mergetool]
+	keepBackup = false
+[merge]
+	tool = vimdiff
+[url "git@github.com:dianlujitao"]
+	insteadOf = https://github.com/dianlujitao
