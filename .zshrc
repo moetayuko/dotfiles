@@ -1,3 +1,9 @@
+export GEM_HOME=$HOME/.gem
+
+# If you come from bash you might have to change your $PATH.
+export PATH=$GEM_HOME/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+[[ ! -f ~/pkgs/notroot/bashrc ]] || source ~/pkgs/notroot/bashrc
+
 neofetch
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -6,11 +12,6 @@ neofetch
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-export GEM_HOME=$HOME/.gem
-
-# If you come from bash you might have to change your $PATH.
-export PATH=$GEM_HOME/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 if [ -d /usr/share/oh-my-zsh ]; then
