@@ -27,3 +27,5 @@
 	tool = vimdiff
 [url "git@github.com:dianlujitao"]
 	insteadOf = https://github.com/dianlujitao
+[alias]
+	wdiff = diff --color-words

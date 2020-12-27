@@ -178,3 +178,4 @@ export CCACHE_EXEC=$(which ccache)
 setopt shwordsplit
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias cp='/bin/cp --reflink=auto'
