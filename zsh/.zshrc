@@ -17,10 +17,10 @@ fi
 if [ -d /usr/share/oh-my-zsh ]; then
   DISABLE_AUTO_UPDATE="true"
   export ZSH=/usr/share/oh-my-zsh
-  ZSH_CUSTOM=$HOME/.zsh-custom
 else
   export ZSH=$HOME/.oh-my-zsh
 fi
+ZSH_CUSTOM=$HOME/.zsh-custom
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
