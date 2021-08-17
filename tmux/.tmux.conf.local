@@ -411,6 +411,5 @@ set -g @plugin 'schasse/tmux-jump'
 set -g @plugin 'tmux-plugins/tmux-fpp'
 
 set -g @resurrect-capture-pane-contents 'on'
-set -g @resurrect-dir '~/.tmux-plugins/resurrect'
 
 set -g @jump-key 'S'
