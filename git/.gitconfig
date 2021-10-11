@@ -1,12 +1,10 @@
 [user]
-	email = dianlujitao@gmail.com
-	name = dianlujitao
+	email = loli@yuko.moe
+	name = MoetaYuko
 [color]
 	ui = auto
 [core]
 	editor = vim
-[http]
-	cookiefile = /home/dianlujitao/.gitcookies
 [sendemail]
 	smtpserver = smtp.gmail.com
 	smtpserverport = 587
@@ -25,7 +23,7 @@
 	keepBackup = false
 [merge]
 	tool = vimdiff
-[url "git@github.com:dianlujitao"]
-	insteadOf = https://github.com/dianlujitao
+[url "git@github.com:MoetaYuko"]
+	insteadOf = https://github.com/MoetaYuko
 [alias]
 	wdiff = diff --color-words
