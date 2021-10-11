@@ -16,3 +16,6 @@
 [submodule "zsh/.zsh-custom/themes/powerlevel10k"]
 	path = zsh/.zsh-custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "zsh/.zsh-custom/plugins/conda-zsh-completion"]
+	path = zsh/.zsh-custom/plugins/conda-zsh-completion
+	url = https://github.com/esc/conda-zsh-completion

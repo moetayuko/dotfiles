@@ -92,6 +92,7 @@ plugins=(
   ###
   adb
   command-not-found
+  conda-zsh-completion
   copydir
   dircycle
   docker
