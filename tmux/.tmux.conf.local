@@ -422,7 +422,6 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'morantron/tmux-fingers'
 set -g @plugin 'schasse/tmux-jump'
-set -g @plugin 'tmux-plugins/tmux-fpp'
 
 set -g @resurrect-capture-pane-contents 'on'
 
