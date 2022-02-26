@@ -27,3 +27,5 @@
 	insteadOf = https://github.com/MoetaYuko
 [alias]
 	wdiff = diff --color-words
+[review "review.lineageos.org"]
+	username = dianlujitao
