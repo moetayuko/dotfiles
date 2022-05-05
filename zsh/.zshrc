@@ -4,7 +4,7 @@ export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 [[ ! -f ~/pkgs/notroot/bashrc ]] || source ~/pkgs/notroot/bashrc
 
-neofetch
+fastfetch
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
