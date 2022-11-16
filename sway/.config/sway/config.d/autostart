@@ -1,0 +1,6 @@
+exec fcitx5 -d
+exec mako
+exec dex -a -s ~/.config/autostart/
+exec nm-applet --indicator
+
+# vim:ft=swayconfig

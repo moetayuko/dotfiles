@@ -1,0 +1,2 @@
+for_window [app_id="zenity"] floating enable
+for_window [instance="wechat.exe" title="EmotionView"] floating enable
