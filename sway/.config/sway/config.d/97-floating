@@ -1,0 +1,5 @@
+for_window [app_id="zenity"] floating enable
+for_window [instance="wechat.exe"] floating enable
+for_window [class="wemeetapp"] floating enable
+
+# vim:ft=swayconfig

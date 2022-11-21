@@ -1,0 +1,17 @@
+seat * xcursor_theme phinger-cursors 32
+
+# Style
+font pango:monospace 14px
+default_border pixel 1
+titlebar_border_thickness 1
+gaps outer 10
+gaps inner 10
+
+## Window decoration
+# class                 border  backgr. text    indicator child_border
+client.focused          #c49ec4 #262626 #f0f0f0 #9ec3c4   #c49ec4
+client.focused_inactive #c49ec4 #262626 #f0f0f0 #9ec3c4   #c49ec4
+client.unfocused        #c49ec4 #0f0f0f #f0f0f0 #9ec3c4   #4c4c4c
+client.urgent           #c49ec4 #c49ec4 #0f0f0f #9ec3c4   #c49ec4
+
+# vim:ft=swayconfig

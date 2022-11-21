@@ -1,0 +1,4 @@
+assign [class="wechat.exe"] → number 6
+assign [app_id="thunderbird"] → number 7
+
+# vim:ft=swayconfig

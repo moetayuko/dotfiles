@@ -1,0 +1,11 @@
+exec fcitx5 -d
+exec mako
+exec nm-applet --indicator
+exec /usr/lib/kdeconnectd
+exec /usr/lib/geoclue-2.0/demos/agent
+exec_always autotiling
+
+# Start XDG desktop entries at last
+exec gdbus wait --session org.kde.StatusNotifierWatcher && dex -a -s ~/.config/autostart/
+
+# vim:ft=swayconfig

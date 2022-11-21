@@ -9,36 +9,47 @@
     "modules-center": ["sway/window"],
     "modules-right": ["idle_inhibitor", "pulseaudio", "cpu", "memory", "backlight", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{index} {icon}",
+        "format-icons": {
+            "1": "<span font='Font Awesome 6 Free 10'></span>",
+            "2": "<span font='Font Awesome 6 Brands 10'></span>",
+            "3": "<span font='Font Awesome 6 Free 10'></span>",
+            "4": "<span font='Font Awesome 6 Free 10'></span>",
+            "5": "<span font='Font Awesome 6 Brands 10'></span>",
+            "6": "<span font='Font Awesome 6 Free 10'></span>",
+            "7": "<span font='Font Awesome 6 Free 10'></span>",
+            "urgent": "<span font='Font Awesome 6 Free Solid 10'></span>",
+            "focused": "<span font='Font Awesome 6 Free 10'></span>",
+            "default": "<span font='Font Awesome 6 Free Solid 10'></span>"
+        },
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": []
+        }
+    },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
-        "format-icons": ["", ""],
+        "format-icons": ["", "<span font='Font Awesome 6 Free 10'></span>"],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "<span font='Font Awesome 6 Free 10'></span>",
+            "deactivated": "<span font='Font Awesome 6 Free 10'></span>"
         }
     },
     "tray": {
