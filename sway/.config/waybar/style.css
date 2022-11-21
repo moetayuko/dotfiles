@@ -15,7 +15,7 @@
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
-  background-color: @surface0;
+  background-color: alpha(@surface0, 0.7);
   margin-left: 1rem;
   color: @text;
 }
@@ -48,7 +48,7 @@
 #clock,
 #battery,
 #pulseaudio {
-  background-color: @surface0;
+  background-color: alpha(@surface0, 0.7);
   padding: 0.5rem 1rem;
   margin: 5px 0;
 }
@@ -126,5 +126,6 @@
 }
 
 #idle_inhibitor.activated {
-  background-color: @surface2;
+  color: @base;
+  background-color: @pink;
 }
