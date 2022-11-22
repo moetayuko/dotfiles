@@ -74,8 +74,8 @@
         "interval": 10,
         "exec": "$HOME/.config/waybar/custom-ddcutil.sh",
         "return-type": "json",
-        "on-scroll-up": "ddcutil --noverify setvcp 10 -d 1 + 5",
-        "on-scroll-down": "ddcutil --noverify setvcp 10 -d 1 - 5"
+        "on-scroll-up": "flock -n /tmp/ddclock ddcutil --noverify setvcp 10 -d 1 + 5",
+        "on-scroll-down": "flock -n /tmp/ddclock ddcutil --noverify setvcp 10 -d 1 - 5"
     },
     "battery": {
         "states": {
