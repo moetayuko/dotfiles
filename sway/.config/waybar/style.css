@@ -100,7 +100,8 @@
 }
 
 #mode {
-  color: @overlay0;
+  background-color: @overlay0;
+  color: @text;
   border-radius: 1rem;
 }
 
