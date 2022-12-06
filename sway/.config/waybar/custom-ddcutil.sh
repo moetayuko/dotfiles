@@ -1,8 +1,8 @@
 #!/bin/sh -e
 
-disp=1
+model=273B1
 
-ddc_output=$(flock /tmp/ddclock ddcutil getvcp 10 -t -d $disp | grep VCP)
+ddc_output=$(flock /tmp/ddclock ddcutil getvcp 10 -t -l $model | grep VCP)
 [[ "$ddc_output" =~ "ERR" ]] && exit 1
 
 cur_br=$(echo "$ddc_output" | cut -d' ' -f4)

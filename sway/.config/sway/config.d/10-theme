@@ -9,8 +9,8 @@ gaps inner 10
 
 ## Window decoration
 # class                 border  backgr. text    indicator child_border
-client.focused          #c49ec4 #262626 #f0f0f0 #9ec3c4   #c49ec4
-client.focused_inactive #c49ec4 #262626 #f0f0f0 #9ec3c4   #c49ec4
+client.focused          #c49ec4 #515151 #f0f0f0 #9ec3c4   #c49ec4
+client.focused_inactive #c49ec4 #515151 #f0f0f0 #9ec3c4   #c49ec4
 client.unfocused        #c49ec4 #0f0f0f #f0f0f0 #9ec3c4   #4c4c4c
 client.urgent           #c49ec4 #c49ec4 #0f0f0f #9ec3c4   #c49ec4
 
