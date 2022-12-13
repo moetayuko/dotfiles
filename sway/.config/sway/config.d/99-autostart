@@ -5,6 +5,7 @@ exec mako
 exec nm-applet --indicator
 exec /usr/lib/kdeconnectd
 exec /usr/lib/geoclue-2.0/demos/agent
+exec pcmanfm-qt -d
 exec_always autotiling
 
 # Start XDG desktop entries at last
