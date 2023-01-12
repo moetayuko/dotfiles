@@ -31,9 +31,9 @@ output * bg /home/dianlujitao/图片/83088427_p0.jpg fill
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 "$Locker" \
+         timeout 300 $Locker \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep "$Locker"
+         before-sleep $Locker
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
