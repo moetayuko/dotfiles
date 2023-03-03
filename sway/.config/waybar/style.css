@@ -1,9 +1,9 @@
 @import "mocha.css";
 
 * {
-  font-family: monospace;
+  font-family: system-ui;
   font-size: 15px;
-  min-height: 0;
+  min-height: 24px;
 }
 
 #waybar {

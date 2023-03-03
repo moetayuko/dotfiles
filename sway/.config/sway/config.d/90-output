@@ -1,5 +1,5 @@
 set $disp1 DP-1
-set $disp2 DP-3
+set $disp2 DP-2
 
 output $disp1 position 0,0 scale 2
 output $disp2 position 1920,0
@@ -11,7 +11,7 @@ workspace 4 output $disp1
 workspace 5 output $disp1
 workspace 6 output $disp1
 workspace 7 output $disp1
-workspace 8 output $disp2
+workspace 8 output $disp1
 workspace 9 output $disp2
 workspace 10 output $disp2
 

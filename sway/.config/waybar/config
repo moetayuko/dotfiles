@@ -19,8 +19,9 @@
             "3": "<span font='Font Awesome 6 Free 10'></span>",
             "4": "<span font='Font Awesome 6 Free 10'></span>",
             "5": "<span font='Font Awesome 6 Brands 10'></span>",
-            "6": "<span font='Font Awesome 6 Free 10'></span>",
-            "7": "<span font='Font Awesome 6 Free 10'></span>",
+            "6": "<span font='Font Awesome 6 Free 10'></span>",
+            "7": "<span font='Font Awesome 6 Free 10'></span>",
+            "8": "<span font='Font Awesome 6 Free 10'></span>",
             "urgent": "<span font='Font Awesome 6 Free Solid 10'></span>",
             "focused": "<span font='Font Awesome 6 Free 10'></span>",
             "default": "<span font='Font Awesome 6 Free Solid 10'></span>"
@@ -32,7 +33,8 @@
             "4": [],
             "5": [],
             "6": [],
-            "7": []
+            "7": [],
+            "8": []
         }
     },
     "sway/mode": {
