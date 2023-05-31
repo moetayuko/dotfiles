@@ -1,3 +1,5 @@
 *~
 ssh/.ssh/*
 !ssh/.ssh/config
+zsh/.zsh-custom/conf.d/*ignore*
+sway/.config/nwg-panel/*/

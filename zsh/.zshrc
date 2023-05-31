@@ -2,7 +2,6 @@ export GEM_HOME=$HOME/.gem
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$GEM_HOME/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-[[ ! -f ~/pkgs/notroot/bashrc ]] || source ~/pkgs/notroot/bashrc
 
 fastfetch
 
@@ -179,3 +178,5 @@ export CCACHE_EXEC=$(which ccache)
 setopt shwordsplit
 
 alias cp='/bin/cp --reflink=auto'
+
+source $ZSH_CUSTOM/conf.d/*.zsh
