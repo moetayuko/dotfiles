@@ -265,6 +265,8 @@
       "icon-size": 16,
       "icon-placement": "left"
     },
-    "hyprland-workspaces": {}
+    "hyprland-workspaces": {},
+    "sigrt": 64,
+    "use-sigrt": false
   }
 ]

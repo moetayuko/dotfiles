@@ -179,4 +179,4 @@ setopt shwordsplit
 
 alias cp='/bin/cp --reflink=auto'
 
-source $ZSH_CUSTOM/conf.d/*.zsh
+[ -d $ZSH_CUSTOM/conf.d ] && source $ZSH_CUSTOM/conf.d/*.zsh
