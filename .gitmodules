@@ -19,3 +19,6 @@
 [submodule "zsh/.zsh-custom/plugins/conda-zsh-completion"]
 	path = zsh/.zsh-custom/plugins/conda-zsh-completion
 	url = https://github.com/esc/conda-zsh-completion
+[submodule "nvim/.config/nvim"]
+	path = nvim/.config/nvim
+	url = https://github.com/MoetaYuko/nvimrc
