@@ -22,3 +22,4 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = https://github.com/MoetaYuko/nvimrc
+	branch = main
