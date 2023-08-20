@@ -115,7 +115,8 @@ plugins=(
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-export EDITOR='vim'
+export EDITOR='nvim'
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
