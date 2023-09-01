@@ -2,4 +2,5 @@
 ssh/.ssh/*
 !ssh/.ssh/config
 zsh/.zsh-custom/conf.d/*ignore*
-sway/.config/nwg-panel/*/
+wayland/.config/eww/eww_covers/
+wayland/.config/eww/scripts/cache/
