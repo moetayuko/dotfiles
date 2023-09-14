@@ -4,7 +4,7 @@
 [color]
 	ui = auto
 [core]
-	editor = vim
+	editor = nvim
 [sendemail]
 	smtpserver = smtp.gmail.com
 	smtpserverport = 587
@@ -19,13 +19,10 @@
 	required = true
 [url "http://source.codeaurora.cn"]
 	insteadOf = https://source.codeaurora.org
-[mergetool]
-	keepBackup = false
-[merge]
-	tool = vimdiff
 [url "git@github.com:MoetaYuko"]
 	insteadOf = https://github.com/MoetaYuko
 [alias]
 	wdiff = diff --color-words
+  mergetool = "!nvim -c DiffviewOpen"
 [review "review.lineageos.org"]
 	username = dianlujitao
