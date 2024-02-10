@@ -94,7 +94,7 @@
 (deflisten activews :initial 1 "scripts/activews")
 (deflisten audiojson :initial "[]" "scripts/audiolevels")
 (deflisten battery :initial "{\"bgcolor\":\"transparent\",\"cirbgcolor\":\"transparent\",\"circolor\":\"#ffd9de\",\"color\":\"white\",\"icon\":\"\",\"percentage\":54,\"quickicon\":\"\",\"status\":\"00:06hleft\",\"wattage\":\"11.9W\"}" "scripts/battery 2>/dev/null")
-(deflisten bluetooth :initial `{"icon": "","batt_icon":"","text":"Bluetooth off"}` "scripts/bluetooth")
+; (deflisten bluetooth :initial `{"icon": "","batt_icon":"","text":"Bluetooth off"}` "scripts/bluetooth")
 (defpoll calendar :initial "[]" :interval "15m" `eww update monthshift=0 && eww update calendartitle="$(date '+%B %Y')" && scripts/calendarlayout`)
 (deflisten cheatsheet :initial "[]" "cat json/cheatsheet.json | gojq -c -M")
 (deflisten cavajson :initial "[[0,0]]" `scripts/cavajson`)

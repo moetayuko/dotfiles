@@ -23,56 +23,56 @@
             (box
               :class "spacing-h-5"
               :orientation "h"
-              (box
-                (eventbox ; Wifi
-                  :class "sidebar-toggle${net.essid == 'lo' ? '' : '-active'}"
-                  :onclick "scripts/net toggle &"
-                  :cursor "pointer"
-                  :onrightclick "XDG_CURRENT_DESKTOP='gnome' gnome-control-center wifi &"
-                  (box
-                    :class "spacing-h-5"
-                    :space-evenly false :orientation "h"
-                    (label
-                      :class "icon-material txt-norm"
-                      :text {WIFI_ICONS[net.level]}
-                    )
-                    (label :xalign 0
-                      :class "txt-txt-norm"
-                      :hexpand true
-                      :text "Internet"
-                    )
-                    (label
-                      :class "icon-material txt-norm"
-                      :text "chevron_right"
-                    )
-                  )
-                )
-              )
-              (box
-                (eventbox ; Bluetooth
-                  :class "sidebar-toggle${bluetooth.text == 'Bluetooth off' ? '' : '-active'}"
-                  :onclick "scripts/bluetooth toggle &"
-                  :cursor "pointer"
-                  :onrightclick "blueberry &"
-                  (box
-                    :class "spacing-h-5"
-                    :space-evenly false :orientation "h"
-                    (label
-                      :class "icon-material txt-norm"
-                      :text {bluetooth.icon}
-                    )
-                    (label :xalign 0
-                      :class "txt-txt-norm"
-                      :hexpand true
-                      :text "Bluetooth"
-                    )
-                    (label
-                      :class "icon-material txt-norm"
-                      :text "chevron_right"
-                    )
-                  )
-                )
-              )
+              ; (box
+              ;   (eventbox ; Wifi
+              ;     :class "sidebar-toggle${net.essid == 'lo' ? '' : '-active'}"
+              ;     :onclick "scripts/net toggle &"
+              ;     :cursor "pointer"
+              ;     :onrightclick "XDG_CURRENT_DESKTOP='gnome' gnome-control-center wifi &"
+              ;     (box
+              ;       :class "spacing-h-5"
+              ;       :space-evenly false :orientation "h"
+              ;       (label
+              ;         :class "icon-material txt-norm"
+              ;         :text {WIFI_ICONS[net.level]}
+              ;       )
+              ;       (label :xalign 0
+              ;         :class "txt-txt-norm"
+              ;         :hexpand true
+              ;         :text "Internet"
+              ;       )
+              ;       (label
+              ;         :class "icon-material txt-norm"
+              ;         :text "chevron_right"
+              ;       )
+              ;     )
+              ;   )
+              ; )
+              ; (box
+              ;   (eventbox ; Bluetooth
+              ;     :class "sidebar-toggle${bluetooth.text == 'Bluetooth off' ? '' : '-active'}"
+              ;     :onclick "scripts/bluetooth toggle &"
+              ;     :cursor "pointer"
+              ;     :onrightclick "blueberry &"
+              ;     (box
+              ;       :class "spacing-h-5"
+              ;       :space-evenly false :orientation "h"
+              ;       (label
+              ;         :class "icon-material txt-norm"
+              ;         :text {bluetooth.icon}
+              ;       )
+              ;       (label :xalign 0
+              ;         :class "txt-txt-norm"
+              ;         :hexpand true
+              ;         :text "Bluetooth"
+              ;       )
+              ;       (label
+              ;         :class "icon-material txt-norm"
+              ;         :text "chevron_right"
+              ;       )
+              ;     )
+              ;   )
+              ; )
               (box
                 (eventbox
                   :class "sidebar-toggle${hyprjson.nightlight ? '-active' : ''}"

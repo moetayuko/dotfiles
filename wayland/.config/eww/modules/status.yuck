@@ -2,7 +2,7 @@
   (box
     :space-evenly false
     (box :hexpand true)
-    (systray :pack-direction "rtl" :icon-size 18)
+    (systray :icon-size 18 :spacing 5)
     (box :class "corner-width")
     ; (label
     ;   :class "bar-width icon-material bar-system-icon txt-norm txt"

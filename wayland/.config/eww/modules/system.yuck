@@ -85,7 +85,7 @@
           :space-evenly false :spacing 10
           :orientation "h"
           :class "bar-pad-horiz-moreright"
-          (systray :pack-direction "rtl" :icon-size 20)
+          (systray :icon-size 20 :spacing 10)
           ; (box
           ;   :valign "center"
           ;   :orientation "v"
@@ -95,16 +95,16 @@
           ;   )
           ;   (label :class "txt-tiny txt" :text {lang_ibus.name_abbr})
           ; )
-          (label
-            :valign "center"
-            :class "icon-material bar-system-icon txt-norm txt"
-            :text {WIFI_ICONS[net.level]}
-          )
-          (label
-            :valign "center"
-            :class "icon-material bar-system-icon txt-norm txt"
-            :text {bluetooth.icon}
-          )
+          ; (label
+          ;   :valign "center"
+          ;   :class "icon-material bar-system-icon txt-norm txt"
+          ;   :text {WIFI_ICONS[net.level]}
+          ; )
+          ; (label
+          ;   :valign "center"
+          ;   :class "icon-material bar-system-icon txt-norm txt"
+          ;   :text {bluetooth.icon}
+          ; )
         )
         (box
           :valign "center"
