@@ -26,3 +26,5 @@
   mergetool = "!nvim -c DiffviewOpen"
 [review "review.lineageos.org"]
 	username = dianlujitao
+[pull]
+	rebase = false

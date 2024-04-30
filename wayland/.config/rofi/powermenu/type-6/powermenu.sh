@@ -106,13 +106,7 @@ case ${chosen} in
 		run_cmd --hibernate
         ;;
     $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
-		elif [[ -x '/usr/bin/swaylock' ]]; then
-			swaylock -f
-		fi
+		loginctl lock-session
         ;;
     $suspend)
 		run_cmd --suspend
