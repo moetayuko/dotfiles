@@ -2,5 +2,5 @@
 ssh/.ssh/*
 !ssh/.ssh/config
 zsh/.zsh-custom/conf.d/*ignore*
-wayland/.config/eww/eww_covers/
-wayland/.config/eww/scripts/cache/
+hyprland/.config/eww/eww_covers/
+hyprland/.config/eww/scripts/cache/
