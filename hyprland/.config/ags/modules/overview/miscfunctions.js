@@ -33,15 +33,11 @@ export function launchCustomCommand(command) {
     }
     else if (args[0] == '>light') { // Light mode
         darkMode.value = false;
-        execAsync([`bash`, `-c`, `mkdir -p ${GLib.get_user_cache_dir()}/ags/user && sed -i "1s/.*/light/"  ${GLib.get_user_cache_dir()}/ags/user/colormode.txt`])
-            .then(execAsync(['bash', '-c', `${App.configDir}/scripts/color_generation/switchcolor.sh`]))
-            .catch(print);
+        execAsync('darkman set light').catch(print);
     }
     else if (args[0] == '>dark') { // Dark mode
         darkMode.value = true;
-        execAsync([`bash`, `-c`, `mkdir -p ${GLib.get_user_cache_dir()}/ags/user && sed -i "1s/.*/dark/"  ${GLib.get_user_cache_dir()}/ags/user/colormode.txt`])
-            .then(execAsync(['bash', '-c', `${App.configDir}/scripts/color_generation/switchcolor.sh`]))
-            .catch(print);
+        execAsync('darkman set dark').catch(print);
     }
     else if (args[0] == '>badapple') { // Black and white
         execAsync([`bash`, `-c`, `mkdir -p ${GLib.get_user_cache_dir()}/ags/user && sed -i "3s/.*/monochrome/" ${GLib.get_user_cache_dir()}/ags/user/colormode.txt`])
