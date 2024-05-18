@@ -4,3 +4,11 @@ ssh/.ssh/*
 zsh/.zsh-custom/conf.d/*ignore*
 hyprland/.config/eww/eww_covers/
 hyprland/.config/eww/scripts/cache/
+
+__pycache__/
+hyprland/.config/ags/scss/_material.scss
+hyprland/.config/fuzzel/fuzzel.ini
+hyprland/.config/hypr/hyprland/colors.conf
+hyprland/.config/hypr/hyprlock.conf
+hyprland/.config/ags/scss/_musicmaterial.scss
+hyprland/.config/ags/scss/_musicwal.scss

@@ -6,7 +6,7 @@ export default (id = 0) => PopupWindow({ // On-screen keyboard
     monitor: id,
     name: `session${id}`,
     visible: false,
-    keymode: 'exclusive',
+    keymode: 'on-demand',
     layer: 'overlay',
     exclusivity: 'ignore',
     anchor: ['top', 'bottom', 'left', 'right'],

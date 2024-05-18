@@ -1,3 +1,4 @@
+
 const { Gdk, Gtk } = imports.gi;
 import App from 'resource:///com/github/Aylur/ags/app.js'
 import Variable from 'resource:///com/github/Aylur/ags/variable.js';
