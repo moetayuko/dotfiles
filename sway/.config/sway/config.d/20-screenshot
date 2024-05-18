@@ -1,5 +1,0 @@
-bindsym Print exec grimshot --notify save screen - | swappy -f -
-bindsym $mod+Print exec ~/.config/rofi/applets/bin/screenshot.sh
-bindsym $mod+Shift+s exec grimshot --notify save area - | swappy -f -
-
-# vim:ft=swayconfig

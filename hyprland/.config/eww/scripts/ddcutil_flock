@@ -1,3 +1,0 @@
-#!/bin/sh
-LOCKPATH="$XDG_RUNTIME_DIR/ddcutil.lock"
-exec flock -n $LOCKPATH ddcutil "$@"

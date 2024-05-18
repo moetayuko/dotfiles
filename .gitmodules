@@ -1,6 +1,3 @@
-[submodule "vim/.vim"]
-	path = vim/.vim
-	url = https://github.com/MoetaYuko/vimrc
 [submodule "tmux/.tmux"]
 	path = tmux/.tmux
 	url = https://github.com/gpakosz/.tmux
