@@ -4,6 +4,12 @@
 //   options listed in this file will override the default ones in the above file
 
 const userConfigOptions = {
+  'icons': {
+    'symbolicIconTheme': {
+      "dark": "Papirus-Dark",
+      "light": "Papirus-Light",
+    },
+  }
 }
 
 export default userConfigOptions;

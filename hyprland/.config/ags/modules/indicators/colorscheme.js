@@ -124,8 +124,7 @@ const ColorSchemeSettings = () => Widget.Box({
                     desc: 'Ya should go to sleep!',
                     initValue: darkMode.value,
                     onChange: (_, newValue) => {
-                        let lightdark = newValue == 0 ? "light" : "dark";
-                        execAsync(`darkman set ${lightdark}`).catch(print);
+                        darkMode.value = !!newValue;
                     },
                     extraSetup: (self) => self.hook(darkMode, (self) => {
                         self.enabled.value = darkMode.value;
