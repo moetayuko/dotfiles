@@ -1,9 +1,5 @@
-export GEM_HOME=$HOME/.gem
-
 # If you come from bash you might have to change your $PATH.
-export PATH=$GEM_HOME/bin:$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
-fastfetch
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -14,22 +10,20 @@ fi
 
 # Path to your oh-my-zsh installation.
 if [ -d /usr/share/oh-my-zsh ]; then
-  DISABLE_AUTO_UPDATE="true"
   export ZSH=/usr/share/oh-my-zsh
 else
   export ZSH=$HOME/.oh-my-zsh
 fi
-ZSH_CUSTOM=$HOME/.zsh-custom
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -40,17 +34,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -62,6 +55,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -78,11 +74,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$HOME/.zsh-custom
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
@@ -104,6 +100,7 @@ plugins=(
   tmux
   z.lua
   zsh-autosuggestions
+  zsh-lazyload
   zsh-syntax-highlighting
 )
 
@@ -117,6 +114,7 @@ plugins=(
 
 export EDITOR='nvim'
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
+ZSH_DISABLE_COMPFIX=true
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -130,7 +128,7 @@ export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
@@ -142,42 +140,21 @@ source $ZSH/oh-my-zsh.sh
 
 # zsh-autosuggestions
 # BUG: https://github.com/ohmyzsh/ohmyzsh/issues/7809
-# start typing + [Up-Arrow] - fuzzy find history forward
-if [[ "${terminfo[kcuu1]}" != "" ]]; then
-  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
-fi
-# start typing + [Down-Arrow] - fuzzy find history backward
-if [[ "${terminfo[kcud1]}" != "" ]]; then
-  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
-fi
+bindkey "^P" up-line-or-history
+bindkey "^[OA" up-line-or-beginning-search
+bindkey "^[[5~" up-line-or-history
+bindkey "^[[A" up-line-or-history
+bindkey "^N" down-line-or-history
+bindkey "^[OB" down-line-or-beginning-search
+bindkey "^[[6~" down-line-or-history
+bindkey "^[[B" down-line-or-history
 
-bindkey -M vicmd "k" up-line-or-beginning-search
-bindkey -M vicmd "j" down-line-or-beginning-search
-bindkey '^L' vi-forward-char
+# dircycle: alt + shift + left/right
+bindkey '^[[1;4D' insert-cycledleft
+bindkey '^[[1;4C' insert-cycledright
 
-# dircycle: alt+h/l
-bindkey '^[h' insert-cycledleft
-bindkey '^[l' insert-cycledright
-
-# tab complete menu: ctrl+h/j/k/l
-bindkey -M menuselect '^H' vi-backward-char
-bindkey -M menuselect '^K' vi-up-line-or-history
-bindkey -M menuselect '^L' vi-forward-char
-bindkey -M menuselect '^J' vi-down-line-or-history
-
-function dirdiff()
-{
-    # Shell-escape each path:
-    DIR1=$(printf '%q' "$1"); shift
-    DIR2=$(printf '%q' "$1"); shift
-    vim $@ -c "DirDiff $DIR1 $DIR2"
-}
-
-# Android
+# ccache
 export USE_CCACHE=1
 export CCACHE_EXEC=$(which ccache)
-setopt shwordsplit
 
-alias cp='/bin/cp --reflink=auto'
-
-[ -d $ZSH_CUSTOM/conf.d ] && source $ZSH_CUSTOM/conf.d/*.zsh
+(( $+commands[micromamba] )) && [ -f "$ZSH_CUSTOM/conf.d/micromamba.ignore.zsh" ] && lazyload micromamba -- "source $ZSH_CUSTOM/conf.d/micromamba.ignore.zsh" || true
