@@ -1,6 +1,6 @@
 [user]
 	email = loli@yuko.moe
-	name = MoetaYuko
+	name = Moeta Yuko
 [color]
 	ui = auto
 [core]
@@ -17,10 +17,8 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[url "http://source.codeaurora.cn"]
-	insteadOf = https://source.codeaurora.org
-[url "git@github.com:MoetaYuko"]
-	insteadOf = https://github.com/MoetaYuko
+[url "git@github.com:moetayuko"]
+	insteadOf = https://github.com/moetayuko
 [alias]
 	wdiff = diff --color-words
   mergetool = "!nvim -c DiffviewOpen"

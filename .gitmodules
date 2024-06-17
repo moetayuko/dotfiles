@@ -18,7 +18,7 @@
 	url = https://github.com/esc/conda-zsh-completion
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
-	url = https://github.com/MoetaYuko/nvimrc
+	url = https://github.com/moetayuko/nvimrc.git
 [submodule "zsh/.zsh-custom/plugins/zsh-lazyload"]
 	path = zsh/.zsh-custom/plugins/zsh-lazyload
 	url = https://github.com/qoomon/zsh-lazyload
