@@ -158,3 +158,4 @@ export USE_CCACHE=1
 export CCACHE_EXEC=$(which ccache)
 
 (( $+commands[micromamba] )) && [ -f "$ZSH_CUSTOM/conf.d/micromamba.ignore.zsh" ] && lazyload micromamba -- "source $ZSH_CUSTOM/conf.d/micromamba.ignore.zsh" || true
+source $ZSH_CUSTOM/conf.d/*.source.zsh
