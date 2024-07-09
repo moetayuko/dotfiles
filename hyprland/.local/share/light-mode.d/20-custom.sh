@@ -10,7 +10,7 @@ sed -i "/^Net\/ThemeName /s/ .*$/ \"$THEME\"/" ~/.config/xsettingsd/xsettingsd.c
 sed -i "/^Net\/IconThemeName /s/ .*$/ \"$ICON_THEME\"/" ~/.config/xsettingsd/xsettingsd.conf
 pkill -0 xsettingsd || killall -HUP xsettingsd
 
-crudini --set ~/.config/Kvantum/kvantum.kvconfig General theme MateriaLight
+crudini --set ~/.config/Kvantum/kvantum.kvconfig General theme catppuccin-latte-sapphire
 
 crudini --set ~/.config/lxqt/lxqt.conf General icon_theme $ICON_THEME
 crudini --set ~/.config/lxqt/lxqt.conf Qt style $QT_STYLE
