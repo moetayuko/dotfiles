@@ -85,7 +85,6 @@ plugins=(
   # BUG: most come first https://github.com/ohmyzsh/ohmyzsh/issues/3435
   vi-mode
   ###
-  adb
   command-not-found
   conda-zsh-completion
   copypath
