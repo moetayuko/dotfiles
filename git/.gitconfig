@@ -5,6 +5,7 @@
 	ui = auto
 [core]
 	editor = nvim
+	abbrev = 12
 [sendemail]
 	smtpserver = smtp.gmail.com
 	smtpserverport = 587
@@ -26,3 +27,5 @@
 	username = dianlujitao
 [pull]
 	rebase = false
+[pretty]
+	fixes = Fixes: %h (\"%s\")

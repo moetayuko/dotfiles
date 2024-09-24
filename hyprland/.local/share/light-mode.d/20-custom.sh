@@ -3,6 +3,7 @@
 THEME=adw-gtk3
 ICON_THEME=Papirus-Light
 QT_STYLE=kvantum
+PLASMA_LOOK=org.kde.breeze.desktop
 
 gsettings set org.gnome.desktop.interface icon-theme $ICON_THEME
 
@@ -10,10 +11,15 @@ sed -i "/^Net\/ThemeName /s/ .*$/ \"$THEME\"/" ~/.config/xsettingsd/xsettingsd.c
 sed -i "/^Net\/IconThemeName /s/ .*$/ \"$ICON_THEME\"/" ~/.config/xsettingsd/xsettingsd.conf
 pkill -0 xsettingsd || killall -HUP xsettingsd
 
-crudini --set ~/.config/Kvantum/kvantum.kvconfig General theme catppuccin-latte-sapphire
+kvantummanager --set catppuccin-latte-sapphire
 
-crudini --set ~/.config/lxqt/lxqt.conf General icon_theme $ICON_THEME
-crudini --set ~/.config/lxqt/lxqt.conf Qt style $QT_STYLE
+plasma-apply-lookandfeel -a $PLASMA_LOOK
+kwriteconfig6 --group "KDE" --key "widgetStyle" $QT_STYLE
+/usr/lib/plasma-changeicons $ICON_THEME
+for i in {0..5}; do
+	dbus-send /KIconLoader org.kde.KIconLoader.iconChanged "int32:$i"
+done
+dbus-send /KGlobalSettings org.kde.KGlobalSettings.notifyChange int32:2 int32:0
 
 crudini --set ~/.config/qt6ct/qt6ct.conf Appearance icon_theme $ICON_THEME
 crudini --set ~/.config/qt6ct/qt6ct.conf Appearance style $QT_STYLE
