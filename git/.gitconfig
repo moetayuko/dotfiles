@@ -5,7 +5,6 @@
 	ui = auto
 [core]
 	editor = nvim
-	abbrev = 12
 [sendemail]
 	smtpserver = smtp.gmail.com
 	smtpserverport = 587
@@ -29,3 +28,5 @@
 	rebase = false
 [pretty]
 	fixes = Fixes: %h (\"%s\")
+[url "https://mirrors.tuna.tsinghua.edu.cn/git/AOSP/"]
+	insteadof = https://android.googlesource.com

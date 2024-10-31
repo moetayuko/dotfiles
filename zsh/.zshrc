@@ -114,6 +114,7 @@ TRAPTERM () { exit }
 # export LANG=en_US.UTF-8
 
 export EDITOR='nvim'
+export DIFFPROG='nvim -d'
 export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 ZSH_DISABLE_COMPFIX=true
 
@@ -138,6 +139,16 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # zsh-autosuggestions
 # BUG: https://github.com/ohmyzsh/ohmyzsh/issues/7809
