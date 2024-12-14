@@ -22,11 +22,10 @@
 [alias]
 	wdiff = diff --color-words
   mergetool = "!nvim -c DiffviewOpen"
+	fixes = show -s --abbrev-commit --abbrev=12 --pretty=format:\"Fixes: %h (\\\"%s\\\")%n\"
 [review "review.lineageos.org"]
 	username = dianlujitao
 [pull]
 	rebase = false
-[pretty]
-	fixes = Fixes: %h (\"%s\")
 [url "https://mirrors.tuna.tsinghua.edu.cn/git/AOSP/"]
 	insteadof = https://android.googlesource.com
