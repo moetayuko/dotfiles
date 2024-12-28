@@ -15,7 +15,8 @@ kvantummanager --set catppuccin-mocha-sapphire
 
 plasma-apply-lookandfeel -a $PLASMA_LOOK
 kwriteconfig6 --group "KDE" --key "widgetStyle" $QT_STYLE
-/usr/lib/plasma-changeicons $ICON_THEME
+kwriteconfig6 --group "Icons" --key "Theme" $ICON_THEME
+# /usr/lib/plasma-changeicons $ICON_THEME
 for i in {0..5}; do
 	dbus-send /KIconLoader org.kde.KIconLoader.iconChanged "int32:$i"
 done
