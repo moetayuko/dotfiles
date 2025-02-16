@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ags run-js 'darkMode.value = false;'
+agsv1 run-js 'darkMode.value = false;'

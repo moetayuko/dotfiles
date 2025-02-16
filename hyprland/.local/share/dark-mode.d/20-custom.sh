@@ -11,8 +11,6 @@ sed -i "/^Net\/ThemeName /s/ .*$/ \"$THEME\"/" ~/.config/xsettingsd/xsettingsd.c
 sed -i "/^Net\/IconThemeName /s/ .*$/ \"$ICON_THEME\"/" ~/.config/xsettingsd/xsettingsd.conf
 pkill -0 xsettingsd || killall -HUP xsettingsd
 
-kvantummanager --set catppuccin-mocha-sapphire
-
 plasma-apply-lookandfeel -a $PLASMA_LOOK
 kwriteconfig6 --group "KDE" --key "widgetStyle" $QT_STYLE
 kwriteconfig6 --group "Icons" --key "Theme" $ICON_THEME
