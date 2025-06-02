@@ -1,4 +1,4 @@
-#!/usr/bin/env -S\_/bin/sh\_-xc\_"source\_\$(eval\_echo\_\$ILLOGICAL_IMPULSE_VIRTUAL_ENV)/bin/activate&&exec\_python\_-E\_"\$0"\_"\$@""
+#!/usr/bin/env -S\_/bin/sh\_-c\_"source\_\$(eval\_echo\_\$ILLOGICAL_IMPULSE_VIRTUAL_ENV)/bin/activate&&exec\_python\_-E\_"\$0"\_"\$@""
 import argparse
 import math
 import json
@@ -83,8 +83,6 @@ if args.path is not None:
     if(args.smart):
         if(hct.chroma < 20):
             args.scheme = 'neutral'
-        if(hct.tone > 60):
-            darkmode = False
 elif args.color is not None:
     argb = hex_to_argb(args.color)
     hct = Hct.from_int(argb)

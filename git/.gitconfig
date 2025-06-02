@@ -27,5 +27,9 @@
 	username = dianlujitao
 [pull]
 	rebase = false
-[url "https://mirrors.tuna.tsinghua.edu.cn/git/AOSP/"]
+[url "https://mirrors.tuna.tsinghua.edu.cn/git/AOSP"]
 	insteadof = https://android.googlesource.com
+; [url "https://mirrors.tuna.tsinghua.edu.cn/git/lineageOS/LineageOS"]
+; 	insteadof = https://github.com/LineageOS
+[http]
+	cookiefile = /home/dianlujitao/.gitcookies
