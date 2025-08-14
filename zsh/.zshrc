@@ -166,4 +166,4 @@ bindkey '^[[1;4D' insert-cycledleft
 bindkey '^[[1;4C' insert-cycledright
 
 (( $+commands[micromamba] )) && [ -f "$ZSH_CUSTOM/conf.d/micromamba.ignore.zsh" ] && lazyload micromamba -- "source $ZSH_CUSTOM/conf.d/micromamba.ignore.zsh" || true
-(){ setopt localoptions extendedglob; [[ -n $ZSH_CUSTOM/conf.d/*.source.zsh(#qN) ]] } && source $ZSH_CUSTOM/conf.d/*.source.zsh || true
+for f in $ZSH_CUSTOM/conf.d/*.source.zsh(N); source "$f"
