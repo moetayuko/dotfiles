@@ -1,6 +1,7 @@
 auto_activate_base: false
 channels:
-  - defaults
+  # - defaults
+  - conda-forge
 show_channel_urls: true
 default_channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main

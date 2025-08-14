@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-agsv1 run-js 'darkMode.value = false;'
+~/.config/quickshell/ii/scripts/colors/switchwall.sh --mode light --noswitch

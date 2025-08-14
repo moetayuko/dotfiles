@@ -165,9 +165,5 @@ bindkey "^[[B" down-line-or-history
 bindkey '^[[1;4D' insert-cycledleft
 bindkey '^[[1;4C' insert-cycledright
 
-# ccache
-export USE_CCACHE=1
-export CCACHE_EXEC=$(which ccache)
-
 (( $+commands[micromamba] )) && [ -f "$ZSH_CUSTOM/conf.d/micromamba.ignore.zsh" ] && lazyload micromamba -- "source $ZSH_CUSTOM/conf.d/micromamba.ignore.zsh" || true
 (){ setopt localoptions extendedglob; [[ -n $ZSH_CUSTOM/conf.d/*.source.zsh(#qN) ]] } && source $ZSH_CUSTOM/conf.d/*.source.zsh || true
