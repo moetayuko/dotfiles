@@ -6,6 +6,7 @@ zsh/.zsh-custom/conf.d/*ignore*
 __pycache__/
 hyprland/.config/ags/scss/_material.scss
 hyprland/.config/fuzzel/fuzzel.ini
+hyprland/.config/hypr/custom/specific/
 hyprland/.config/hypr/hyprland/colors.conf
 hyprland/.config/hypr/hyprlock.conf
 hyprland/.config/ags/scss/_musicmaterial.scss
