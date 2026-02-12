@@ -33,3 +33,5 @@
 ; 	insteadof = https://github.com/LineageOS
 [http]
 	cookiefile = /home/dianlujitao/.gitcookies
+[credential]
+	helper = store
