@@ -1,0 +1,11 @@
+hl.env("QT_IM_MODULE", "fcitx")
+hl.env("XMODIFIERS", "@im=fcitx")
+hl.env("SDL_IM_MODULE", "fcitx")
+hl.env("GLFW_IM_MODULE", "ibus")
+hl.env("INPUT_METHOD", "fcitx")
+
+hl.env("ANV_VIDEO_DECODE", "1")
+hl.env("GOLDENDICT_FORCE_WAYLAND", "1")
+hl.env("JADX_GUI_OPTS", "-Dsun.java2d.uiScale=2")
+hl.env("USE_CCACHE", "1")
+hl.env("CCACHE_EXEC", "/usr/bin/ccache")
