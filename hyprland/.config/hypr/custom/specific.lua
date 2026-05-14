@@ -1,6 +1,0 @@
-hl.monitor({
-  output = "DP-1",
-  mode = "preferred",
-  position = "auto",
-  scale = 2,
-})
