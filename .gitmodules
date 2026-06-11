@@ -1,5 +1,5 @@
-[submodule "tmux/.tmux"]
-	path = tmux/.tmux
+[submodule "tmux/.local/share/tmux/oh-my-tmux"]
+	path = tmux/.local/share/tmux/oh-my-tmux
 	url = https://github.com/gpakosz/.tmux
 [submodule "zsh/.zsh-custom/plugins/z.lua"]
 	path = zsh/.zsh-custom/plugins/z.lua
