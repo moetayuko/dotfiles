@@ -11,11 +11,6 @@ hl.config({
 	},
 })
 
-local current_dir = debug.getinfo(1).source:match("@(.*/)")
-if current_dir then
-	local f = io.open(current_dir .. "specific.lua")
-	if f then
-		io.close(f)
-		require("custom/specific")
-	end
+if is_file_exists(HOME .. "/.config/hypr/custom/specific.lua") then
+	require("custom.specific")
 end
